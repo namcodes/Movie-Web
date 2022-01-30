@@ -1,0 +1,343 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">movie</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Movies</p>
+                     <h3 class="title">{{movies_count}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_movie_index")}}">Movies list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">tv</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Series</p>
+                     <h3 class="title">{{series_count}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_serie_index")}}">Series TV list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">live_tv</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Channels TV</p>
+                     <h3 class="title">{{channels_count}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_channel_index")}}">Channels TV list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">view_list</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Categories</p>
+                     <h3 class="title">{{category_count}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_category_index")}}">Categories list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">label</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Genre</p>
+                     <h3 class="title">{{genre_count}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_genre_index")}}">Genres list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">flag</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Languages</p>
+                     <h3 class="title">{{language_count}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_language_index")}}">Channels TV list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">public</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Countries</p>
+                     <h3 class="title">{{country_count}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_country_index")}}">Countries list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">recent_actors</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Actores</p>
+                     <h3 class="title">{{actor_count}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_actor_index")}}">Actors list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">slideshow</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Slides</p>
+                     <h3 class="title">{{slide_count}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_slide_index")}}">Slides list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">remove_red_eye</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Movies Views</p>
+                     <h3 class="title">{{movie_views}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_movie_index")}}">Movies list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">cloud_download</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Movies Downloads</p>
+                     <h3 class="title">{{movie_downloads}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_movie_index")}}">Movies list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">share</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Movies Shares</p>
+                     <h3 class="title">{{movie_shares}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_movie_index")}}">Movies list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">remove_red_eye</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Series Views</p>
+                     <h3 class="title">{{serie_views}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_serie_index")}}">Series list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">cloud_download</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Series Downloads</p>
+                     <h3 class="title">{{serie_downloads}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_serie_index")}}">Series list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">share</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Series Shares</p>
+                     <h3 class="title">{{serie_shares}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_serie_index")}}">Series list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">remove_red_eye</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Channels Views</p>
+                     <h3 class="title">{{channel_views}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_channel_index")}}">Channels list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">share</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Channels Shares</p>
+                     <h3 class="title">{{channel_shares}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_channel_index")}}">Channels list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">comment</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Comments</p>
+                     <h3 class="title">{{comment_count}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_comment_index")}}">Comments list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">message</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Support and Rating</p>
+                     <h3 class="title">{{support_count}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_support_index")}}">Support list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="red">
+                    <i class="material-icons">devices_other</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Installs</p>
+                     <h3 class="title">{{devices_count}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">perm_device_information</i><span> Application install</span> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="black">
+                    <i class="material-icons">info</i>
+                </div>
+                <div class="card-content">
+                    <p class="category">Version</p>
+                     <h3 class="title">{{version_count}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">keyboard_arrow_right</i><a href="{{path("app_version_index")}}">Versions list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}
