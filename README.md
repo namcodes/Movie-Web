@@ -1,4 +1,4 @@
-my_project
-==========
+Movie Project
+=============
 
-A Symfony project created on January 7, 2017, 3:50 pm.
+A Symfony project created on July 8, 2021, 3:50 pm.
